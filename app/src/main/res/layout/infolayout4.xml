@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/prev_button_info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="prevInf4Click"
+        android:text="@string/prev_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backClick"
+        android:text="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="343dp"
+        android:layout_height="135dp"
+        android:background="#ffffff"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/r1txt1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="30-RS"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r1txt2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="62->"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r1txt3"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="94- ^"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r1txt4"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="126- ~"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/r2txt1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="31-US"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r2txt2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="63-?"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r2txt3"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="95- _"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/r2txt4"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="127-DEL"
+                android:textColor="#000000"
+                tools:ignore="HardcodedText" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/ascii_table_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ASCII TABLE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/next_button_info4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextInf4Click"
+        android:text="@string/next_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">brainfuck interpreter</string>
+    <string name="about">App version 0.0.1.\nAndroid brainfuck ide made by https://github.com/dazmaks (10/03/2021).</string>
+    <string name="run_button_string">run</string>
+    <string name="out_name">Output:</string>
+    <string name="code_field_hint">code</string>
+    <string name="output_doesn_t_used">output doesn\'t used</string>
+    <string name="info_button">info</string>
+    <string name="back_button">back</string>
+    <string name="next_button">next</string>
+    <string name="prev_button">prev</string>
+    <string name="asciiabout">NUL-null character\nSOH-start of header\nSTX-startof text\nETX-end of text\nEOT-end of transmission\nENQ-enquiry</string>
+</resources>
