@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static org.dazmaks.brainfuck.Interpreter.*;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void runClick(View view) {
         TextView txtOut = findViewById(R.id.output);
         EditText edtOut = findViewById(R.id.codeedit);
-        txtOut.setText(edtOut.getText().toString());
+        txtOut.setText(run(edtOut.getText().toString()));
     }
 
     public void infoClick(View view) {
