@@ -2,12 +2,13 @@ package org.dazmaks.brainfuck;
 
 public class Interpreter {
 
-    public static String run(String code) {
+    public static String run(String code, String input) {
         String ocode = optimize(code);
 
         Tape tape = new Tape();
 
-        String out = "";
+        int inpcharnum = -1;
+        StringBuilder out = new StringBuilder();
         for (int n = 0; n < ocode.length(); n++)  {
             switch(ocode.charAt(n)) {
                 case '>':
@@ -23,10 +24,11 @@ public class Interpreter {
                     tape.dec();
                     break;
                 case ',':
-                    tape.set((char) 123);
+                    inpcharnum++;
+                    tape.set(input.charAt(inpcharnum));
                     break;
                 case '.':
-                    out += tape.get();
+                    out.append(tape.get());
                     break;
                 case '[':
                     if (tape.get() == 0) {
@@ -56,7 +58,7 @@ public class Interpreter {
                     break;
             }
         }
-        return out;
+        return out.toString();
     }
 
     private static String optimize(String code) {

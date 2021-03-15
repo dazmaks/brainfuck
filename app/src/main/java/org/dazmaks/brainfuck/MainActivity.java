@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public void runClick(View view) {
         TextView txtOut = findViewById(R.id.output);
         EditText edtOut = findViewById(R.id.codeedit);
-        txtOut.setText(run(edtOut.getText().toString()));
+        EditText edtInp = findViewById(R.id.input);
+        txtOut.setText(run(edtOut.getText().toString(), edtInp.getText().toString()));
     }
 
     public void infoClick(View view) {
@@ -36,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void nextInf3Click(View view) {
         setContentView(R.layout.infolayout4);
-    }
-    public void nextInf4Click(View view) {
-        setContentView(R.layout.infolayout3);
     }
     public void prevInf2Click(View view) {
         setContentView(R.layout.infolayout);
