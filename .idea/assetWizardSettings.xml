@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\femboy\Pictures\ascii-table.png" />
+                                                <entry key="imagePath" value="C:\Users\femboy\Pictures\icon.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -111,9 +111,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ascii_table" />
-                                      <entry key="previewDensity" value="XXXHIGH" />
-                                      <entry key="showSafeZone" value="false" />
+                                      <entry key="outputName" value="icon" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -277,12 +275,6 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
-                                    </map>
-                                  </option>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="previewDensity" value="XXXHIGH" />
-                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>

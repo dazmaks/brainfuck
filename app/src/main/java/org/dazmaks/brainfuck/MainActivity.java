@@ -2,10 +2,17 @@ package org.dazmaks.brainfuck;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import static org.dazmaks.brainfuck.Interpreter.*;
 
@@ -15,12 +22,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FloatingActionButton copyfab = findViewById(R.id.copyfab);
+        copyfab.setOnClickListener(view -> {
+            EditText edtCode = findViewById(R.id.codeedit);
+
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("Code:", edtCode.getText().toString());
+            clipboard.setPrimaryClip(clip);
+
+            Snackbar.make(view, "Code copied!", Snackbar.LENGTH_LONG)
+                    .show();
+        });
     }
+    @SuppressLint("SetTextI18n")
     public void runClick(View view) {
         TextView txtOut = findViewById(R.id.output);
-        EditText edtOut = findViewById(R.id.codeedit);
+        EditText edtCode = findViewById(R.id.codeedit);
         EditText edtInp = findViewById(R.id.input);
-        txtOut.setText(run(edtOut.getText().toString(), edtInp.getText().toString()));
+        String runout = run(edtCode.getText().toString(), edtInp.getText().toString(), view);
+        if(runout.equals("")){
+            txtOut.setText("Program doesn't use output");
+        }else{
+            txtOut.setText(runout);
+        }
     }
 
     public void infoClick(View view) {
