@@ -18,14 +18,18 @@ import static org.dazmaks.brainfuck.Interpreter.*;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView txtOut = findViewById(R.id.output);
+        EditText edtCode = findViewById(R.id.codeedit);
+        EditText edtInp = findViewById(R.id.input);
+
         FloatingActionButton copyfab = findViewById(R.id.copyfab);
         copyfab.setOnClickListener(view -> {
-            EditText edtCode = findViewById(R.id.codeedit);
 
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("Code:", edtCode.getText().toString());
@@ -34,18 +38,17 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(view, "Code copied!", Snackbar.LENGTH_LONG)
                     .show();
         });
-    }
-    @SuppressLint("SetTextI18n")
-    public void runClick(View view) {
-        TextView txtOut = findViewById(R.id.output);
-        EditText edtCode = findViewById(R.id.codeedit);
-        EditText edtInp = findViewById(R.id.input);
-        String runout = run(edtCode.getText().toString(), edtInp.getText().toString(), view);
-        if(runout.equals("")){
-            txtOut.setText("Program doesn't use output");
-        }else{
-            txtOut.setText(runout);
-        }
+        FloatingActionButton runfab = findViewById(R.id.runfab);
+        runfab.setOnClickListener(view -> {
+
+            String runout = run(edtCode.getText().toString(), edtInp.getText().toString(), view);
+            if(runout.equals("")){
+                Snackbar.make(view, "Program doesn't use output", Snackbar.LENGTH_LONG)
+                        .show();
+            }else{
+                txtOut.setText(runout);
+            }
+        });
     }
 
     public void infoClick(View view) {

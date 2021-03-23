@@ -63,6 +63,8 @@ public class Interpreter {
                         break;
                 }
             }
+            Snackbar.make(view, "Ran successfully", Snackbar.LENGTH_LONG)
+                    .show();
             return out.toString();
         } catch (Exception e) {
             Snackbar.make(view, e.toString(), Snackbar.LENGTH_LONG)
